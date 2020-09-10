@@ -1,5 +1,6 @@
 class Api::ActorsController < ApplicationController
   def single_actor_action
-    render json: { message: "sanitycheck" }
+    @actor = Actor.find_by(id: 8)
+    render "single_actor.json.jb"
   end
 end
