@@ -10,3 +10,7 @@
 # 8.times do
 #   Actor.create(first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, known_for: FFaker::Movie.title)
 # end
+
+4.times do
+  Movie.create(title: FFaker::Movie.title, year: FFaker::Vehicle.year, plot: FFaker::BaconIpsum.sentence)
+end
