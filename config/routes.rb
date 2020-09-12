@@ -4,5 +4,9 @@ Rails.application.routes.draw do
     get "/single_movie_path" => "movies#single_movie_action"
     get "/all_movies_path" => "movies#all_movies_action"
     get "/three_movies_path" => "movies#three_movies_action"
+    get "/actors" => "actors#show"
+    get "/actors/:id" => "actors#show"
+
+    post "/actors" => "actors#create"
   end
 end
