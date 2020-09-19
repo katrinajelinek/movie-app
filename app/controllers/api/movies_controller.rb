@@ -6,6 +6,7 @@ class Api::MoviesController < ApplicationController
 
   def index
     @movies = Movie.all
+    @movies.where(english: true)
     render "index.json.jb"
   end
 
@@ -20,7 +21,7 @@ class Api::MoviesController < ApplicationController
     if @movie.save
       render "show.json.jb"
     else
-      render json: { errors: @products.errors.full_messages }
+      render json: { errors: @movie.errors.full_messages }
     end
   end
 
@@ -34,7 +35,7 @@ class Api::MoviesController < ApplicationController
     if @movie.save
       render "show.json.jb"
     else
-      render json: { errors: @products.errors.full_messages }
+      render json: { errors: @movie.errors.full_messages }
     end
   end
 

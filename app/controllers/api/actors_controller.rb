@@ -11,6 +11,7 @@ class Api::ActorsController < ApplicationController
 
   def index
     @actors = Actor.all
+    @actors = @actors.order(:age)
     render "index.json.jb"
   end
 
@@ -27,7 +28,7 @@ class Api::ActorsController < ApplicationController
     if @actor.save
       render "show.json.jb"
     else
-      render json: { errors: @product.errors.full_messages }
+      render json: { errors: @actor.errors.full_messages }
     end
   end
 
@@ -41,7 +42,7 @@ class Api::ActorsController < ApplicationController
     if @actor.save
       render "show.json.jb"
     else
-      render json: { errors: @product.errors.full_messages }
+      render json: { errors: @actor.errors.full_messages }
     end
   end
 
