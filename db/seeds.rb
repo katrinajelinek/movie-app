@@ -11,6 +11,15 @@
 #   Actor.create(first_name: FFaker::Name.first_name, last_name: FFaker::Name.last_name, known_for: FFaker::Movie.title)
 # end
 
-4.times do
-  Movie.create(title: FFaker::Movie.title, year: FFaker::Vehicle.year, plot: FFaker::BaconIpsum.sentence)
-end
+MovieGenre.create(genre_id: 4, movie_id: 2)
+MovieGenre.create(genre_id: 1, movie_id: 1)
+MovieGenre.create(genre_id: 4, movie_id: 3)
+MovieGenre.create(genre_id: 2, movie_id: 4)
+MovieGenre.create(genre_id: 3, movie_id: 6)
+MovieGenre.create(genre_id: 2, movie_id: 7)
+MovieGenre.create(genre_id: 2, movie_id: 8)
+MovieGenre.create(genre_id: 4, movie_id: 9)
+MovieGenre.create(genre_id: 3, movie_id: 10)
+MovieGenre.create(genre_id: 4, movie_id: 11)
+MovieGenre.create(genre_id: 4, movie_id: 12)
+MovieGenre.create(genre_id: 4, movie_id: 13)
